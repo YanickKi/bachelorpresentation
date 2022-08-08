@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.1.17)  8 AUG 2022 01:47
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.1.17)  8 AUG 2022 14:04
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -948,12 +948,12 @@ braces):
 >  {german/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for german
-(polyglossia)            loader	loadhyph-de-1901.tex
 (polyglossia)            hyphenation	
-(polyglossia)            patterns	hyph-de-1901.pat.txt
 (polyglossia)            lefthyphenmin	2
 (polyglossia)            righthyphenmin	2
-(polyglossia)            synonyms	 on input line 10
+(polyglossia)            patterns	hyph-de-1901.pat.txt
+(polyglossia)            synonyms	
+(polyglossia)            loader	loadhyph-de-1901.tex on input line 10
 Module polyglossia Info: Language german was not yet loaded; created with id 2 o
 n input line 10
 Package polyglossia Info: Option: German, spelling=new.
@@ -1878,12 +1878,12 @@ LaTeX Info: Redefining \rmfamily on input line 22.
 LaTeX Info: Redefining \sffamily on input line 22.
 LaTeX Info: Redefining \ttfamily on input line 22.
 Module polyglossia Info: Language data for ngerman
-(polyglossia)            loader	loadhyph-de-1996.tex
 (polyglossia)            hyphenation	
-(polyglossia)            patterns	hyph-de-1996.pat.txt
 (polyglossia)            lefthyphenmin	2
 (polyglossia)            righthyphenmin	2
-(polyglossia)            synonyms	 on input line 22
+(polyglossia)            patterns	hyph-de-1996.pat.txt
+(polyglossia)            synonyms	
+(polyglossia)            loader	loadhyph-de-1996.tex on input line 22
 Module polyglossia Info: Language ngerman was not yet loaded; created with id 3 
 on input line 22
 )
@@ -2257,7 +2257,7 @@ Package luatex.def Info: logos/tu.pdf  used on input line 244.
  [11
 
 ]
-<Plots/SK.pdf, id=193, 653.79507pt x 236.33707pt>
+<Plots/SK.pdf, id=192, 653.79507pt x 236.33707pt>
 File: Plots/SK.pdf Graphic file (type pdf)
 <use Plots/SK.pdf>
 Package luatex.def Info: Plots/SK.pdf  used on input line 272.
@@ -2511,16 +2511,51 @@ Package luatex.def Info: logos/tu.pdf  used on input line 551.
 <./Plots/Faktoreninz.pdf>]
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 574.
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
  [34
 
 ]
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 574.
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
  [35
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [36
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [37
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [38
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [39
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [40
 
 ]
 \tf@nav=\write5
@@ -2574,22 +2609,19 @@ LaTeX Info: Redefining \ttfamily on input line 22.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 )
 
 Here is how much of LuaTeX's memory you used:
- 42007 strings out of 477810
+ 42047 strings out of 477810
  100000,1373583 words of node,token memory allocated
- 9620 words of node memory still in use:
+ 9900 words of node memory still in use:
    88 hlist, 10 vlist, 16 rule, 71 disc, 15 local_par, 14 math, 233 glue, 72 ker
-n, 52 penalty, 19 sub_mlist, 502 glyph, 294 attribute, 76 glue_spec, 294 attribu
-te_list, 4 write, 8 pdf_literal, 60 pdf_colorstack, 1 pdf_setmatrix, 1 pdf_save,
- 1 pdf_restore nodes
-   avail lists: 2:2860,3:351,4:320,5:1033,6:62,7:5186,8:168,9:3703,10:16,11:156
+n, 52 penalty, 19 sub_mlist, 502 glyph, 334 attribute, 76 glue_spec, 334 attribu
+te_list, 4 write, 48 pdf_literal, 60 pdf_colorstack, 1 pdf_setmatrix, 1 pdf_save
+, 1 pdf_restore nodes
+   avail lists: 2:2780,3:311,4:320,5:1053,6:62,7:5186,8:168,9:3703,10:16,11:156
  60614 multiletter control sequences out of 65536+600000
- 132 fonts using 43121975 bytes
+ 132 fonts using 43122323 bytes
  128i,19n,144p,696b,1087s stack positions out of 5000i,500n,10000p,200000b,80000s
 </home/yanick/.local/texlive/2021/texmf-dist/fonts/opentype/public/firamath/Fira
 Math-Regular.otf></home/yanick/.local/texlive/2021/texmf-dist/fonts/opentype/pub
@@ -2599,10 +2631,10 @@ exmf-dist/fonts/opentype/public/firamath/FiraMath-Regular.otf></home/yanick/.loc
 al/texlive/2021/texmf-dist/fonts/opentype/public/fira/FiraSans-Medium.otf></home
 /yanick/.local/texlive/2021/texmf-dist/fonts/opentype/public/fira/FiraSans-Light
 .otf>
-Output written on main.pdf (35 pages, 1957767 bytes).
+Output written on main.pdf (40 pages, 1967539 bytes).
 
-PDF statistics: 520 PDF objects out of 1000 (max. 8388607)
- 407 compressed objects within 5 object streams
- 88 named destinations out of 1000 (max. 131072)
+PDF statistics: 556 PDF objects out of 1000 (max. 8388607)
+ 438 compressed objects within 5 object streams
+ 98 named destinations out of 1000 (max. 131072)
  120 words of extra memory for PDF output out of 10000 (max. 100000000)
 
