@@ -1,7 +1,7 @@
 % This example is meant to be compiled with lualatex or xelatex
 % The theme itself also supports pdflatex
 \PassOptionsToPackage{unicode}{hyperref}
-\documentclass[aspectratio=1610, 9pt]{beamer}
+\documentclass[aspectratio=1610, 9pt, xcolor=dvipsnames]{beamer}
 \usepackage{graphicx,caption}
 \parskip0pt
 % Load packages you need here
@@ -30,6 +30,8 @@
 \usepackage{multicol}
 
 \usepackage{relsize}
+
+\usepackage[dvipsnames]{xcolor}
 
 \usepackage{empheq}
 \newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
@@ -82,6 +84,7 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 Tight Binding Modellierung}
 \author[Y.~Kind]{Yanick Kind}
 \institute[AG Anders]{AG Anders \\  Fakultät Physik}
+\date{15. August 2022}
 %\titlegraphic{\includegraphics[width=0.7\textwidth]{images/tudo-title-2.jpg}}
 
 
@@ -94,21 +97,21 @@ Tight Binding Modellierung}
 \end{frame}
 
 \section{Einleitung}
-\subsection{Motivation}
 \begin{frame}{Motivation}
   \vspace*{1cm}
   \centering
   \includegraphics[width = \textwidth]{Plots/images_large_nn1c00139_0002.jpeg}
-  \hspace*{15pt}\hbox{\scriptsize {\small\itshape Pin-Cheng Lin et al., \textit{ACS Nano 15.3 (2021)},  10.1021/acsnano.1c00139. }}
+  \hspace*{15pt}\hbox{\scriptsize {\footnotesize\itshape Pin-Cheng Lin et al., \textit{ACS Nano 15.3 (2021)} }}
 \end{frame}
   \begin{frame}{Motivation}
-  \centering
+    \begin{flushleft}
+      $\quad \quad \quad \quad$ Rastertunnelmikroskopie
+    \end{flushleft}
+    \centering
   \includegraphics[width = \textwidth]{Plots/images_large_nn1c00139_0003.jpeg}
-  \hspace*{15pt}\hbox{\scriptsize {\small\itshape Pin-Cheng Lin et al., \textit{ACS Nano 15.3 (2021)},  10.1021/acsnano.1c00139. }}
+  \hspace*{15pt}\hbox{\scriptsize {\footnotesize\itshape Pin-Cheng Lin et al., \textit{ACS Nano 15.3 (2021)} }}
 \end{frame}
 
-
-\subsection{Struktur von Graphen und der Störstelle}
 \begin{frame}{Struktur von Graphen und der Störstelle}
   \begin{columns}
      \column{0.45\linewidth}
@@ -118,7 +121,7 @@ Tight Binding Modellierung}
       \begin{itemize}
         \item Unterteilung in zwei Untergitter (A und B)
         \begin{itemize}
-          \item[->] zweidimensionales, hexagonales Bravais-Gitter 
+          \item[\textrightarrow] zweidimensionales, hexagonales Bravais-Gitter 
         \end{itemize}
         \item typische Honigwabenstruktur
         \item nächste-Nachbar Abstandsvektoren:
@@ -147,7 +150,7 @@ Tight Binding Modellierung}
       \item Annahme: Mn mittig von den drei umliegenden C
       \item spiegelsymmetrisch um Graphenebene 
       \begin{itemize}
-        \item[->] irrelevant, ob negative oder positive $z$-Komponente
+        \item[\textrightarrow] irrelevant, ob negative oder positive $z$-Komponente
       \end{itemize}
       \item Höhe des Mn variabel
     \end{itemize}
@@ -168,18 +171,17 @@ Tight Binding Modellierung}
 \end{columns} 
 \end{frame}
 
-\subsection{Eigenschaften von Graphen}
 \begin{frame}{Eigenschaften von Graphen}
 \begin{columns}
   \column{0.65\linewidth}
   \begin{itemize}
-      \item $sp^2$-Hybridorbitale -> $\sigma$-Bindung 
-      \item $p$-Orbtiale -> $\pi$-Bindung
+      \item $sp^2$-Hybridorbitale {\color{tugreen} \textrightarrow} $\sigma$-Bindung 
+      \item $p$-Orbtiale {\color{tugreen} \textrightarrow} $\pi$-Bindung
       \end{itemize}
   \column{0.35\linewidth}
   \centering
     \includegraphics[width=\textwidth]{Plots/orbitals.png}
-    \hspace*{15pt}\hbox{\scriptsize {\small\itshape wikipedia.org}}
+    \hspace*{15pt}\hbox{\scriptsize {\footnotesize\itshape wikipedia.org}}
   \end{columns}
   \begin{columns}
   \column{0.65\linewidth}
@@ -190,20 +192,19 @@ Tight Binding Modellierung}
       $\varepsilon_{\vec{k}} \propto \pm \sqrt{3+2 \cos \left ( \sqrt{3}ak_y \right )+2\cos \left ( \frac{3}{2}ak_x+\frac{\sqrt{3}}{2}ak_y \right ) + 2\cos \left ( \frac{3}{2}ak_x-\frac{\sqrt{3}}{2}ak_y \right ) }$
     \item Dispersionsrelation um Dirac-Punkte entwickeln
       \begin{itemize}
-        \item[->] $\varepsilon_{\vec{k}} \propto \pm | \vec{k} |$
+        \item[\textrightarrow] $\varepsilon_{\vec{k}} \propto \pm | \vec{k} |$
       \end{itemize}
     \end{itemize} 
     \column{0.35\linewidth}
     \vspace*{0.3cm}
     \centering
       \includegraphics[width=\textwidth]{Plots/dirac_cones.png}
-      \hspace*{15pt}\hbox{\scriptsize {\small\itshape A. H. Castro Neto et al., \textit{Rev. Mod. Phys.} 81}}
+      \hspace*{15pt}\hbox{\scriptsize {\footnotesize\itshape A. H. Castro Neto et al., \textit{Rev. Mod. Phys.} 81 (2009)}}
       % 10.1103/RevModPhys.81.109 (2009)
   \end{columns}
 \end{frame}
 
 \section{Theoretische Grundlagen}
-\subsection{Greensche Funktionen}
 \begin{frame}{Greensche Funktionen}
   \begin{itemize}
     \setlength\itemsep{1em}
@@ -217,7 +218,6 @@ Tight Binding Modellierung}
 \end{itemize}  
 \end{frame}
 
-\subsection{Tight Binding Modell}
 \begin{frame}{Tight Binding Modell}
   \begin{itemize}
     \setlength\itemsep{0.8em}
@@ -225,14 +225,13 @@ Tight Binding Modellierung}
     \item Betrachtung des Hamiltonians für ein Elektron $H = \frac{\vec{p}^2}{2M} + \sum_{j\alpha} v(\vec{r}-\vec{l}_j - \vec{R}_{\alpha}) = \frac{\vec{p}^2}{2M} + v_{\vec{R}}(\vec{r})$
     \item Dreizentren-Beiträge vernachlässigen, da Elektronen stark lokalisiert sind
     \begin{itemize}
-      \item[->] $\boxed{t^{j\alpha,j'\alpha'}_{lm,l'm'} = - \int \symup{d}^3r \; \overline{\Psi}_{lm} \left (\vec{r}-\vec{l}_j - \vec{R}_{\alpha} \right ) 
+      \item[\textrightarrow] $\boxed{t^{j\alpha,j'\alpha'}_{lm,l'm'} = - \int \symup{d}^3r \; \overline{\Psi}_{lm} \left (\vec{r}-\vec{l}_j - \vec{R}_{\alpha} \right ) 
       v \left ( \vec{r} - \vec{l}_{j} - \vec{R}_{\alpha} \right ) \Psi_{l'm'} \left (\vec{r}-\vec{l}_{j'} - \vec{R}_{\alpha'} \right )}$
     \end{itemize}
     \item Tight Binding Hamiltonian in zweiter Quantisierung $H = - \sum_{jj'} \sum_{\alpha \alpha'}\sum_{ll'} \sum_{mm'} t^{j\alpha,j'\alpha'}_{lm,l'm'}  c_{jlm\alpha}^\dagger c_{j'l'm'\alpha'}$
   \end{itemize}
 \end{frame}
 
-\subsection{Slater-Koster-Integrale}
 \begin{frame}{Slater-Koster-Integrale}
   \begin{equation*}
     \boxed{E_{lm,l'm'} = \int \symup{d}^3r \; \overline{\Psi}_{lm} \left (\vec{r}-\vec{d} \, \right )
@@ -249,15 +248,19 @@ Tight Binding Modellierung}
     m = \frac{\vec{d} \cdot \hat{y}}{\left | \vec{d} \right |} \; , \quad
     n = \frac{\vec{d} \cdot \hat{z}}{\left | \vec{d} \right |} \label{eqn:RK}
 \end{equation*}\\
-\vspace*{1cm}
+\vspace*{0.45cm}
 \begin{flushleft}
 Beispiel: $E_{z,x^2-y^2} = \frac{\sqrt{3}}{2}n(l^2-m^2) V_{pd\sigma} - n (l^2-m^2) V_{pd\pi}$ 
 \end{flushleft}
 \pause
-\vspace*{1.4cm}
+\vspace*{1.67cm}
 \begin{tikzpicture}[remember picture,overlay]
-\node at (current page.center) {\colorbox{white}{\includegraphics[width = 0.8\textwidth, center]{Plots/SK.pdf}}};
+\node at (current page.center) {\colorbox{white}{\includegraphics[width = 0.9\textwidth, center]{Plots/SK.pdf}}};
 \end{tikzpicture}
+\vspace*{-1.2cm}
+\begin{equation*}
+  E_{s,x} = lV_{pd\sigma}
+\end{equation*}
 \end{frame}
 
 \section{Ergebnisse}
@@ -273,11 +276,11 @@ Beispiel: $E_{z,x^2-y^2} = \frac{\sqrt{3}}{2}n(l^2-m^2) V_{pd\sigma} - n (l^2-m^
   \begin{equation*}
     H = \underbrace{- t  \sum_{i=1}^N \sum_{j=1}^3
     \left ( c_{\text{A},\vec{l}_i}^\dagger c_{\text{B},\vec{l}_i+\vec{\delta}_j} + c_{\text{B},\vec{l}_i+\vec{\delta}_j}^\dagger c_{\text{A},\vec{l}_i} \right )}_{\mathlarger{H_0}} \Pause 
-    + \underbrace{\sum_{m=1}^5 \varepsilon_m d_m^\dagger d_m}_{\mathlarger{H_\text{Def}}}  \Pause
+    + \underbrace{\sum_{m=1}^5 \varepsilon_m d^\dagger_m d_m}_{\mathlarger{H_\text{Def}}}  \Pause
     + \underbrace{\sum_{m=1}^5 \sum_{j=1}^3 \left ( V_{mj} d_m^\dagger c_{\text{B},\vec{l}+\vec{\delta}_j} + \overline{V}_{mj} c_{\text{B},\vec{l}+\vec{\delta}_j}^\dagger d_m \right ) }_{\mathlarger{H_\text{Kop}}}
   \end{equation*}
 \end{frame}
-\subsection{Slater-Koster-Integrale}
+
 \begin{frame}{Slater-Koster-Integrale}
   \begin{table}
     \centering
@@ -286,11 +289,11 @@ Beispiel: $E_{z,x^2-y^2} = \frac{\sqrt{3}}{2}n(l^2-m^2) V_{pd\sigma} - n (l^2-m^
     \cmidrule(lr){2-4}
     & {$1$} & {$2$} & {$3$} \\
     \midrule
-    {$E_{z,xy}$      }  & {$0$}                                               & {$-\frac{3}{4}bV_{pd\sigma} + \frac{\sqrt{3}}{2}bV_{pd\pi}$}          & {$ \frac{3}{4}bV_{pd\sigma}-\frac{\sqrt{3}}{2}bV_{pd\pi}$}         \vspace{0.5cm} \\ 
-    {$E_{z,xz}$      }  & {$\sqrt{3}fV_{pd\sigma} + hV_{pd\pi}$}              & {$-\frac{\sqrt{3}}{2}fV_{pd\sigma} - \frac{1}{2} hV_{pd\pi}$}         & {$-\frac{\sqrt{3}}{2}fV_{pd\sigma} - \frac{1}{2} hV_{pd\pi}$}      \vspace{0.5cm} \\
-    {$E_{z,zy}$      }  & {$0$}                                               & {$ \frac{3}{2}fV_{pd\sigma}+\frac{\sqrt{3}}{2} hV_{pd\pi}$}           & {$-\frac{3}{2}fV_{pd\sigma}-\frac{\sqrt{3}}{2} hV_{pd\pi}$}        \vspace{0.5cm} \\
-    {$E_{z,3z^2-r^2}$}  & {$q V_{pd\sigma}+\sqrt{3}bV_{pd\pi}$}               & {$q V_{pd\sigma}+\sqrt{3}bV_{pd\pi}$}                                 & {$q V_{pd\sigma}+\sqrt{3}bV_{pd\pi}$} \vspace{0.5cm} \\
-    {$E_{z,x^2-y^2}$ }  & {$\frac{\sqrt{3}}{2}bV_{pd\sigma}-bV_{pd\pi}$}      & {$-\frac{\sqrt{3}}{4}bV_{pd\sigma}+\frac{1}{2}bV_{pd\pi}$}           & {$-\frac{\sqrt{3}}{4}bV_{pd\sigma}+\frac{1}{2}bV_{pd\pi}$}                       \\ 
+    {$E_{z,xy}$      }  & {$\color{Apricot}0$}                                               & {$\color{Apricot}-\frac{3}{4}bV_{pd\sigma} + \frac{\sqrt{3}}{2}bV_{pd\pi}$}          & {$\color{Apricot} \frac{3}{4}bV_{pd\sigma}-\frac{\sqrt{3}}{2}bV_{pd\pi}$}         \vspace{0.5cm} \\ 
+    {$E_{z,xz}$      }  & {$\color{Aquamarine}\sqrt{3}fV_{pd\sigma} + hV_{pd\pi}$}              & {$\color{Aquamarine}-\frac{\sqrt{3}}{2}fV_{pd\sigma} - \frac{1}{2} hV_{pd\pi}$}         & {$\color{Aquamarine}-\frac{\sqrt{3}}{2}fV_{pd\sigma} - \frac{1}{2} hV_{pd\pi}$}      \vspace{0.5cm} \\
+    {$E_{z,zy}$      }  & {$\color{Aquamarine}0$}                                               & {$\color{Aquamarine} \frac{3}{2}fV_{pd\sigma}+\frac{\sqrt{3}}{2} hV_{pd\pi}$}           & {$\color{Aquamarine}-\frac{3}{2}fV_{pd\sigma}-\frac{\sqrt{3}}{2} hV_{pd\pi}$}        \vspace{0.5cm} \\
+    {$E_{z,3z^2-r^2}$}  & {$\color{LimeGreen} q V_{pd\sigma}+\sqrt{3}bV_{pd\pi}$}               & {$\color{LimeGreen}q V_{pd\sigma}+\sqrt{3}bV_{pd\pi}$}                                 & {$\color{LimeGreen}q V_{pd\sigma}+\sqrt{3}bV_{pd\pi}$} \vspace{0.5cm} \\
+    {$E_{z,x^2-y^2}$ }  & {$\color{Apricot}\frac{\sqrt{3}}{2}bV_{pd\sigma}-bV_{pd\pi}$}      & {$\color{Apricot}-\frac{\sqrt{3}}{4}bV_{pd\sigma}+\frac{1}{2}bV_{pd\pi}$}           & {$\color{Apricot}-\frac{\sqrt{3}}{4}bV_{pd\sigma}+\frac{1}{2}bV_{pd\pi}$}                       \\ 
     \bottomrule
     \end{tabular}
   \end{table}
@@ -303,14 +306,13 @@ h & \coloneq -\sin(\theta)(1-2\cos^2(\theta))    & q &  \coloneq -\cos^3(\theta)
 \end{equation*}
 \end{frame}
 \begin{frame}{Hybridisierungsfunktion mittels Bewegungsleichungen}
-\pause
 \begin{equation*}
-  \colorlet{oldcolor}{.}
-  \color{tugreen} \longrightarrow  \color{oldcolor} H = -t \sum_{j \vec{k}} \left ( \symup{e}^{\symup{i}\vec{k}\vec{\delta}_j}c^\dagger_{\text{A},\vec{k}} c_{\text{B},\vec{k}} + 
+      H = -t \sum_{j \vec{k}} \left ( \symup{e}^{\symup{i}\vec{k}\vec{\delta}_j}c^\dagger_{\text{A},\vec{k}} c_{\text{B},\vec{k}} + 
       \symup{e}^{-\symup{i}\vec{k}\vec{\delta}_j} c^\dagger_{\text{B},\vec{k}}c_{\text{A},\vec{k}} \right ) + \sum_m \varepsilon_m d_m^\dagger d_m 
       + \frac{1}{\sqrt{N}}\sum_{mj\vec{k}} \left ( V_{mj}  \symup{e}^{\symup{i}\vec{k}(\vec{l}+\vec{\delta}_j)} d_m^\dagger c_{\text{B},\vec{k}} 
       + V_{mj} \symup{e}^{-\symup{i}\vec{k}(\vec{l}+\vec{\delta}_j)}c^\dagger_{\text{B},\vec{k}} d_m \right )
 \end{equation*}
+\vspace*{0.5cm}
 \pause
 Damit ergibt sich folgende Greensche Funktion  %$Erinnerung: zG_{A,B}(z) = \langle \{A,B\} \rangle - G_{[H,A],B}(z)$
 \begin{equation*}
@@ -343,8 +345,6 @@ Die gesuchte Hybridisierungsfunktion ist gegeben durch
 \end{equation*}
 \end{frame}
 
-
-\subsection{Hybridisierungsfunktion mittels Basistransformation}
 \begin{frame}{Hybridisierungsfunktion mittels Basistransformation}
 \vspace*{1cm}
 Basistransformation 
@@ -376,40 +376,56 @@ Basistransformation
     \begin{frame}{Hybridisierungsfunktion mittels Basistransformation}
 \begin{align*}
   H_\text{Kop} = \frac{1}{\sqrt{3}} 
-      \Biggl(  &\left ( \left   (-\frac{3}{4}\sqrt{3}   \symup{i}    b   V_{pd\sigma} + \frac{3}{2}  \symup{i}   b   V_{pd\pi} \right ) \tilde{c}^\dagger_1  
-                  +\left  ( \frac{3}{4}\sqrt{3}   \symup{i}    b   V_{pd\sigma} - \frac{3}{2}  \symup{i}   b   V_{pd\pi} \right ) \tilde{c}^\dagger_2 \right )            d_1\\
-      +&\left (    \left  ( \frac{3}{2}\sqrt{3}                           f   V_{pd\sigma} + \frac{3}{2}              h   V_{pd\pi} \right ) \tilde{c}^\dagger_1          
-                  +\left  ( \frac{3}{2}\sqrt{3}                           f   V_{pd\sigma} + \frac{3}{2}              h   V_{pd\pi} \right ) \tilde{c}^\dagger_2 \right ) d_2\\
-      +&\left (    \left  ( \frac{3}{2}\sqrt{3}               \symup{i}   f   V_{pd\sigma} + \frac{3}{2}  \symup{i}   h   V_{pd\pi} \right ) \tilde{c}^\dagger_1  
-                  +\left  (-\frac{3}{2}\sqrt{3}               \symup{i}   f   V_{pd\sigma} - \frac{3}{2}  \symup{i}   h   V_{pd\pi} \right ) \tilde{c}^\dagger_2 \right ) d_3\\
-      +&\left (   3 q V_{pd\sigma} + 3 \sqrt{3}  b V_{pd\pi} \right )    \tilde{c}^\dagger_0                                                                              d_4\\
-      +&\left (   \left   ( \frac{3}{4}\sqrt{3}                           b   V_{pd\sigma} - \frac{3}{2}              b   V_{pd\pi} \right ) \tilde{c}^\dagger_1  
-                  +\left  ( \frac{3}{4}\sqrt{3}                           b   V_{pd\sigma} - \frac{3}{2}              b   V_{pd\pi} \right ) \tilde{c}^\dagger_2 \right ) d_5 \Biggr) \\
+      \Biggl(  &\left ( \left   ({\color{Apricot}-\frac{3}{4}\sqrt{3}    b   V_{pd\sigma} + \frac{3}{2}     b   V_{pd\pi}  } \right ) \tilde{c}^\dagger_1  
+                  +\left  ( {\color{Apricot} \frac{3}{4}\sqrt{3}       b   V_{pd\sigma} - \frac{3}{2}     b   V_{pd\pi} } \right ) \tilde{c}^\dagger_2 \right )             \symup{i}  d_1\\
+      +&\left (    \left  ( {\color{Aquamarine}\frac{3}{2}\sqrt{3}                           f   V_{pd\sigma} + \frac{3}{2}              h   V_{pd\pi} } \right ) \tilde{c}^\dagger_1          
+                  +\left  ( {\color{Aquamarine}\frac{3}{2}\sqrt{3}                           f   V_{pd\sigma} + \frac{3}{2}              h   V_{pd\pi} }\right ) \tilde{c}^\dagger_2 \right ) d_2\\
+      +&\left (    \left  ( {\color{Aquamarine}\frac{3}{2}\sqrt{3}                  f   V_{pd\sigma} + \frac{3}{2}     h   V_{pd\pi} }\right ) \tilde{c}^\dagger_1  
+                  +\left  ({\color{Aquamarine}-\frac{3}{2}\sqrt{3}                  f   V_{pd\sigma} - \frac{3}{2}     h   V_{pd\pi} }\right ) \tilde{c}^\dagger_2 \right )  \symup{i}  d_3\\
+      +&\left (   { \color{LimeGreen}3 q V_{pd\sigma} + 3 \sqrt{3}  b V_{pd\pi} } \right )    \tilde{c}^\dagger_0                                                                              d_4\\
+      +&\left (   \left   ( {\color{Apricot}\frac{3}{4}\sqrt{3}                           b   V_{pd\sigma} - \frac{3}{2}              b   V_{pd\pi} } \right ) \tilde{c}^\dagger_1  
+                  +\left  ( { \color{Apricot} \frac{3}{4}\sqrt{3}                           b   V_{pd\sigma} - \frac{3}{2}              b   V_{pd\pi} } \right ) \tilde{c}^\dagger_2 \right ) d_5 \Biggr) \\
                   &  \!  \! \! \! \!  \! \! \! \! \! \! \! \! + \text{h.c.}
 \end{align*}
 \begin{align*}
-  \tilde{d}_0 &= \frac{1}{\sqrt{2}} (d_5-\symup{i}d_1) &     {\color{tugreen}  d_{x^2-y^2}, \; d_{xy}}  \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \tilde{d}_2 &= \frac{1}{\sqrt{2}} (d_5+\symup{i}d_1) \\
-  \tilde{d}_1 &= \frac{1}{\sqrt{2}} (d_2+\symup{i}d_3) &     {\color{tugreen}  d_{xz},      \; d_{zy}}  \; \; \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \tilde{d}_3 &= \frac{1}{\sqrt{2}} (d_2-\symup{i}d_3)
+  \tilde{d}_0 &= \frac{1}{\sqrt{2}} (d_5-\symup{i}d_1) &     {\color{Periwinkle}  d_{x^2-y^2}, \; d_{xy}}  \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \tilde{d}_2 &= \frac{1}{\sqrt{2}} (d_5+\symup{i}d_1) \\
+  \tilde{d}_1 &= \frac{1}{\sqrt{2}} (d_2+\symup{i}d_3) &     {\color{Periwinkle}  d_{xz},      \; d_{zy}}  \; \; \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \tilde{d}_3 &= \frac{1}{\sqrt{2}} (d_2-\symup{i}d_3)
   \end{align*}
   %\begin{align*}
   \end{frame}
   \begin{frame}{Hybridisierungsfunktion mittels Basistransformation}
-    \mathleft
+%    \begin{wrapfigure}{r}{0.3\textwidth}
+%      \centering
+%      \includegraphics[width = 0.25\textwidth]{Plots/3band.pdf}
+%    \end{wrapfigure}
+\begin{columns}
+  \column{0.7\linewidth} 
+  \mathleft
     \begin{equation*}
       \text{Erinnerung: } H_\text{Kop} = \sum_{m=1}^5 \sum_{j=1}^3 \left ( V_{mj} d_m^\dagger c_{\text{B},\vec{l}+\vec{\delta}_j} + \overline{V}_{mj} c_{\text{B},\vec{l}+\vec{\delta}_j}^\dagger d_m \right )
     \end{equation*}
     \mathcenter
-    \vspace*{0.5cm}
-    \begin{empheq}[box=\widefbox]{align*}
-     H_\text{Kop} = \frac{\sqrt{2}}{\sqrt{3}}  \biggl(
-      & \left ( \frac{3}{4}\sqrt{3} b V_{pd\sigma} - \frac{3}{2}  b   V_{pd\pi} \right )      \left ( \tilde{d}^\dagger_0 \tilde{c}_1 + \tilde{d}^\dagger_2 \tilde{c}_2 \right )   \\
-    + & \left ( \frac{3}{2}\sqrt{3} f V_{pd\sigma} + \frac{3}{2}  h   V_{pd\pi} \right )     \left ( \tilde{d}^\dagger_1 \tilde{c}_1 + \tilde{d}^\dagger_3 \tilde{c}_2 \right )   \\
-    + & \left ( \frac{3}{\sqrt{2}} q V_{pd\sigma} + 3 \frac{\sqrt{3}}{\sqrt{2}}  b V_{pd\pi} \right ) \tilde{d}^\dagger_4 \tilde{c}_0 \biggr) + \text{h.c.}
+    \vspace*{1cm}
+    \begin{empheq}[box=\widefbox]{equation*}
+     H_\text{Kop} = 
+        \xi \left ( \tilde{d}^\dagger_0 \tilde{c}_1 + \tilde{d}^\dagger_2 \tilde{c}_2 \right )
+    +   \chi \left ( \tilde{d}^\dagger_1 \tilde{c}_1 + \tilde{d}^\dagger_3 \tilde{c}_2 \right )  
+    +   \zeta \, \tilde{d}^\dagger_4 \tilde{c}_0 + \text{h.c.}
   \end{empheq}
-\vspace*{0.2cm}
+%\vspace*{0.05cm}
 \begin{center}
  \color{tugreen} \huge \textbf{Effektives Drei-Bänder Modell} 
 \end{center}
+\column{0.3\linewidth}
+\hspace{-0.5cm}
+\includegraphics[width=\textwidth]{Plots/3band.pdf}
+\end{columns}
+\vspace*{1cm}
+\begin{equation*}
+  \xi = \left ( {\color{Apricot}\frac{3}{\sqrt{8}} b V_{pd\sigma} - \frac{\sqrt{3}}{\sqrt{2}}  b   V_{pd\pi} }\right ) \, , 
+  \quad \chi = \left ( { \color{Aquamarine} \frac{3}{\sqrt{2}} f V_{pd\sigma} + \frac{\sqrt{3}}{\sqrt{2}}  h   V_{pd\pi} } \right ) \, ,
+  \quad \zeta = \left ( {\color{LimeGreen} \sqrt{3} q V_{pd\sigma} + 3 b V_{pd\pi} } \right )
+\end{equation*}
 \end{frame}
 \begin{frame}{Hybridisierungsfunktion mittels Basistransformation}
 \vspace*{0.3cm}
@@ -418,17 +434,13 @@ Basistransformation
   c_{\text{B},\vec{l}_i+\vec{\delta}_j}^\dagger c_{\text{A},\vec{l}_i} \right ) + \varepsilon \sum_{m=0}^4 \tilde{d}^\dagger_m \tilde{d}_m
   +\sum_{m=0}^4\sum_{l=0}^2 \left (\gamma_{ml} \tilde{d}^\dagger_m \tilde{c}_l + \gamma_{ml} \tilde{c}^\dagger_l \tilde{d}_m \right )
 \end{equation*}
+\begin{wrapfigure}{r}{0.3\textwidth}
+  \includegraphics[width = 0.3\textwidth]{Plots/3band.pdf}
+\end{wrapfigure}
 \vspace*{1cm}
 \begin{equation*}
   \underline{\underline{\gamma}} = 
- \begin{pmatrix}
-     0               & \left ( \frac{3}{\sqrt{8}} b V_{pd\sigma} - \frac{\sqrt{3}}{\sqrt{2}}  b   V_{pd\pi} \right )    &   0           \\
-     0               & \left ( \frac{3}{\sqrt{2}} f V_{pd\sigma} + \frac{\sqrt{3}}{\sqrt{2}}  h   V_{pd\pi} \right )   &   0           \\
-     0               & 0             &   \left ( \frac{3}{\sqrt{8}} b V_{pd\sigma} - \frac{\sqrt{3}}{\sqrt{2}}  b   V_{pd\pi} \right ) \\
-     0               & 0             &   \left ( \frac{3}{\sqrt{2}} f V_{pd\sigma} + \frac{\sqrt{3}}{\sqrt{2}}  h   V_{pd\pi} \right ) \\
-     \left (  \sqrt{3} q V_{pd\sigma} + 3 b V_{pd\pi} \right )     & 0             &   0           \\
- \end{pmatrix}
-= \begin{pmatrix}
+  \begin{pmatrix}
   0               & \xi    &   0           \\
   0               & \chi   &   0           \\
   0               & 0             &   \xi \\
@@ -436,14 +448,10 @@ Basistransformation
   \zeta     & 0             &   0           \\
 \end{pmatrix}
 \end{equation*}
-\end{frame}
-\begin{frame}{Hybridisierungsfunktion mittels Basistransformation}
-\centering
-\includegraphics[width = 0.3\textwidth]{Plots/3band.pdf}
 \begin{itemize}
   \item Die Struktur der Hybridisierungsfunktion $\underline{\underline{\symup{\Delta}}}$ kann direkt abgelesen werden
   \begin{itemize}
-    \item[->] $\underline{\underline{\symup{\Delta}}}$ wird eine blockdiagonale Struktur mit zwei $2 \times 2$-Blöcken und einem $ 1 \times 1$-Block haben
+    \item[\textrightarrow] $\underline{\underline{\symup{\Delta}}}$ wird eine blockdiagonale Struktur mit zwei $2 \times 2$-Blöcken und \\ einem  $ 1 \times 1$-Block haben
   \end{itemize}
 \end{itemize}
 \end{frame}
@@ -488,12 +496,14 @@ Basistransformation
 \end{equation*}
 \vspace*{0.5cm}
 Die Koeffizienten $D_{l,\vec{k}}$ können von den Fouriertransformationen für $\tilde{c}_l$ abgelesen werden
+\pause
 \vspace*{0.5cm}
 \begin{equation*}
     \tilde{c}_0 =   \frac{1}{\sqrt{3N}}\sum_{\vec{k}} \sum_{j=1}^3\symup{e}^{\symup{i}{\vec{k}}(\vec{l}+\vec{\delta}_j)}                            c_{\text{B}, \vec{k}} \; , \quad
     \tilde{c}_1 = \frac{1}{\sqrt{3N}}\sum_{\vec{k}} \sum_{j=1}^3\symup{e}^{\symup{i}{\vec{k}}(\vec{l}+\vec{\delta}_j)+\symup{i}\frac{2(j-1)\pi}{3}} c_{\text{B}, \vec{k}} \; , \quad
     \tilde{c}_2 = \frac{1}{\sqrt{3N}}\sum_{\vec{k}} \sum_{j=1}^3\symup{e}^{\symup{i}{\vec{k}}(\vec{l}+\vec{\delta}_j)-\symup{i}\frac{2(j-1)\pi}{3}} c_{\text{B}, \vec{k}}
 \end{equation*}
+\pause
 \vspace*{0.1cm}
 \begin{equation*}
     G_{\tilde{c}_0, \tilde{c}^\dagger_0} = \frac{z}{3N} \sum_{\vec{k}} \frac{\sum_j \symup{e}^{\symup{i}{\vec{k}}\vec{\delta}_j} \sum_{j'} \symup{e}^{-\symup{i}{\vec{k}}\vec{\delta}_{j'}}                                                            }{z^2-\varepsilon_{\vec{k}}^2} \; , \quad
@@ -522,7 +532,7 @@ Die Koeffizienten $D_{l,\vec{k}}$ können von den Fouriertransformationen für $
 \end{pmatrix} }
 \]
 \end{frame}
-\subsection{Einfluss der Höhe des Mn}
+
 \begin{frame}{Einfluss der Höhe $z$ des Mn}
 \centering
 \includegraphics[width = 0.95\textwidth]{Plots/Faktoreninz.pdf}
@@ -534,26 +544,27 @@ Die Koeffizienten $D_{l,\vec{k}}$ können von den Fouriertransformationen für $
 \end{frame}
 \section{Zusammenfassung und Ausblick}
 \begin{frame}{Zusammenfassung und Ausblick}
-  \begin{itemize}
-    \item Hybridisierungsfunktion bestimmt
-    \begin{itemize}
-      \item in neuer Basis in irreduzible Blöcke zerfallen
-    \end{itemize} \pause
+  \begin{columns}
+    \column{0.7\linewidth}
+  \begin{itemize}[<+->]
+    \item Hybridisierungsfunktion in neuer Basis in irreduzible Blöcke zerfallen
     \item effektives Drei-Bänder Modell für Ankopplung der $3d$-Orbitale an Graphenbandstruktur
-   \pause
-    \item Höhe des Mn diskutiert
+    \item Diskussions der Höhe des Mn
     \vspace*{0.5cm}
-    \pause
-    \item Zusammhang zwischen $q=0$ bei Höhe $z=\qty{1}{\angstrom}$? \pause
-    \item Coulomb-Wechselwirkung zwischen Elektronen \pause
-    \item $\sigma$-Orbitale mit einbeziehen 
+    \item Zusammhang zwischen $q=0$ bei Höhe $z=\qty{1}{\angstrom}$?
+    \item Coulomb-Wechselwirkung zwischen Elektronen
+    \item Einbezug der $\sigma$-Orbitale
     \begin{itemize}
       \item Bindung durch fehlendes C aufgebrochen
-    \end{itemize} \pause
+    \end{itemize} 
     \item Linearkombinationen der $p_z$-Orbitale und ein $\sigma$-Zustand als Abschirmkanäle
     \begin{itemize}
-      \item[->] Spin von $\frac{1}{2}$ bleibt übrig
+      \item[\textrightarrow] Spin von $\frac{1}{2}$ bleibt übrig
     \end{itemize}
   \end{itemize}
+  \column{0.3\linewidth}
+\centering
+\includegraphics[width =0.95\textwidth]{Plots/3band.pdf}
+\end{columns}
 \end{frame}
 \end{document}

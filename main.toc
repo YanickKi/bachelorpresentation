@@ -1,14 +1,5 @@
 \selectlanguage *{german}
 \beamer@sectionintoc {1}{Einleitung}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Motivation}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{Struktur von Graphen und der Störstelle}{5}{0}{1}
-\beamer@subsectionintoc {1}{3}{Eigenschaften von Graphen}{8}{0}{1}
 \beamer@sectionintoc {2}{Theoretische Grundlagen}{10}{0}{2}
-\beamer@subsectionintoc {2}{1}{Greensche Funktionen}{10}{0}{2}
-\beamer@subsectionintoc {2}{2}{Tight Binding Modell}{11}{0}{2}
-\beamer@subsectionintoc {2}{3}{Slater-Koster-Integrale}{12}{0}{2}
 \beamer@sectionintoc {3}{Ergebnisse}{14}{0}{3}
-\beamer@subsectionintoc {3}{1}{Slater-Koster-Integrale}{18}{0}{3}
-\beamer@subsectionintoc {3}{2}{Hybridisierungsfunktion mittels Basistransformation}{25}{0}{3}
-\beamer@subsectionintoc {3}{3}{Einfluss der Höhe des Mn}{33}{0}{3}
 \beamer@sectionintoc {4}{Zusammenfassung und Ausblick}{34}{0}{4}
