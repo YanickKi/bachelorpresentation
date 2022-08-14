@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.1.17)  14 AUG 2022 14:22
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.1.17)  14 AUG 2022 22:47
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -952,10 +952,10 @@ braces):
 >  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for german
 (polyglossia)            righthyphenmin	2
-(polyglossia)            loader	loadhyph-de-1901.tex
+(polyglossia)            patterns	hyph-de-1901.pat.txt
 (polyglossia)            lefthyphenmin	2
 (polyglossia)            hyphenation	
-(polyglossia)            patterns	hyph-de-1901.pat.txt
+(polyglossia)            loader	loadhyph-de-1901.tex
 (polyglossia)            synonyms	 on input line 10
 Module polyglossia Info: Language german was not yet loaded; created with id 2 o
 n input line 10
@@ -1882,10 +1882,10 @@ LaTeX Info: Redefining \sffamily on input line 22.
 LaTeX Info: Redefining \ttfamily on input line 22.
 Module polyglossia Info: Language data for ngerman
 (polyglossia)            righthyphenmin	2
-(polyglossia)            loader	loadhyph-de-1996.tex
+(polyglossia)            patterns	hyph-de-1996.pat.txt
 (polyglossia)            lefthyphenmin	2
 (polyglossia)            hyphenation	
-(polyglossia)            patterns	hyph-de-1996.pat.txt
+(polyglossia)            loader	loadhyph-de-1996.tex
 (polyglossia)            synonyms	 on input line 22
 Module polyglossia Info: Language ngerman was not yet loaded; created with id 3 
 on input line 22
@@ -2119,7 +2119,7 @@ Package luatex.def Info: logos/tu.pdf  used on input line 106.
 [2
 
 <./Plots/rendering.jpg>]
-<Plots/images_large_nn1c00139_0002.jpeg, id=42, 469.0323pt x 145.2627pt>
+<Plots/images_large_nn1c00139_0002.jpeg, id=43, 469.0323pt x 145.2627pt>
 File: Plots/images_large_nn1c00139_0002.jpeg Graphic file (type jpg)
 <use Plots/images_large_nn1c00139_0002.jpeg>
 Package luatex.def Info: Plots/images_large_nn1c00139_0002.jpeg  used on input 
@@ -2136,7 +2136,7 @@ LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/n' will be
  [3
 
 <./Plots/images_large_nn1c00139_0002.jpeg>]
-<Plots/images_large_nn1c00139_0003.jpeg, id=50, 410.2527pt x 159.2349pt>
+<Plots/images_large_nn1c00139_0003.jpeg, id=52, 410.2527pt x 159.2349pt>
 File: Plots/images_large_nn1c00139_0003.jpeg Graphic file (type jpg)
 <use Plots/images_large_nn1c00139_0003.jpeg>
 Package luatex.def Info: Plots/images_large_nn1c00139_0003.jpeg  used on input 
@@ -2150,7 +2150,7 @@ Package luatex.def Info: logos/tu.pdf  used on input line 126.
 [4
 
 <./Plots/images_large_nn1c00139_0003.jpeg>]
-<Plots/graphene_lattice.pdf, id=58, 293.06339pt x 304.22559pt>
+<Plots/graphene_lattice.pdf, id=61, 293.06339pt x 304.22559pt>
 File: Plots/graphene_lattice.pdf Graphic file (type pdf)
 <use Plots/graphene_lattice.pdf>
 Package luatex.def Info: Plots/graphene_lattice.pdf  used on input line 148.
@@ -2162,19 +2162,19 @@ Package luatex.def Info: logos/tu.pdf  used on input line 148.
  [5
 
 <./Plots/graphene_lattice.pdf>]
-<Plots/mangan_impurity_inplane.pdf, id=82, 120.94981pt x 107.09908pt>
+<Plots/mangan_impurity_inplane.pdf, id=85, 120.94981pt x 107.09908pt>
 File: Plots/mangan_impurity_inplane.pdf Graphic file (type pdf)
 <use Plots/mangan_impurity_inplane.pdf>
 Package luatex.def Info: Plots/mangan_impurity_inplane.pdf  used on input line 
 185.
 (luatex.def)             Requested size: 64.26549pt x 56.9055pt.
-<Plots/mangan_impurity_z_component.pdf, id=83, 147.66031pt x 107.13081pt>
+<Plots/mangan_impurity_z_component.pdf, id=86, 147.66031pt x 107.13081pt>
 File: Plots/mangan_impurity_z_component.pdf Graphic file (type pdf)
 <use Plots/mangan_impurity_z_component.pdf>
 Package luatex.def Info: Plots/mangan_impurity_z_component.pdf  used on input l
 ine 185.
 (luatex.def)             Requested size: 78.43307pt x 56.9055pt.
-<Plots/graphene_first_brillouine_zone.pdf, id=84, 150.487pt x 192.5819pt>
+<Plots/graphene_first_brillouine_zone.pdf, id=87, 150.487pt x 192.5819pt>
 File: Plots/graphene_first_brillouine_zone.pdf Graphic file (type pdf)
 <use Plots/graphene_first_brillouine_zone.pdf>
 Package luatex.def Info: Plots/graphene_first_brillouine_zone.pdf  used on inpu
@@ -2210,12 +2210,12 @@ Package luatex.def Info: logos/tu.pdf  used on input line 185.
  [7
 
 ]
-<Plots/orbitals.png, id=131, 1927.2pt x 1093.08376pt>
+<Plots/orbitals.png, id=134, 1927.2pt x 1093.08376pt>
 File: Plots/orbitals.png Graphic file (type png)
 <use Plots/orbitals.png>
 Package luatex.def Info: Plots/orbitals.png  used on input line 218.
 (luatex.def)             Requested size: 148.83801pt x 84.41289pt.
-<Plots/dirac_cones.png, id=132, 804.00375pt x 424.58624pt>
+<Plots/dirac_cones.png, id=136, 804.00375pt x 424.58624pt>
 File: Plots/dirac_cones.png Graphic file (type png)
 <use Plots/dirac_cones.png>
 Package luatex.def Info: Plots/dirac_cones.png  used on input line 218.
@@ -2260,7 +2260,7 @@ Package luatex.def Info: logos/tu.pdf  used on input line 246.
  [11
 
 ]
-<Plots/SK.pdf, id=165, 653.79507pt x 236.33707pt>
+<Plots/SK.pdf, id=172, 653.79507pt x 236.33707pt>
 File: Plots/SK.pdf Graphic file (type pdf)
 <use Plots/SK.pdf>
 Package luatex.def Info: Plots/SK.pdf  used on input line 277.
@@ -2404,7 +2404,7 @@ Package luatex.def Info: logos/tu.pdf  used on input line 408.
  [25
 
 ]
-<Plots/3band.pdf, id=281, 301.39163pt x 339.49321pt>
+<Plots/3band.pdf, id=288, 301.39163pt x 339.49321pt>
 File: Plots/3band.pdf Graphic file (type pdf)
 <use Plots/3band.pdf>
 Package luatex.def Info: Plots/3band.pdf  used on input line 442.
@@ -2465,7 +2465,7 @@ Package luatex.def Info: logos/tu.pdf  used on input line 547.
  [32
 
 ]
-<Plots/Faktoreninz.pdf, id=345, 942.75412pt x 348.63951pt>
+<Plots/Faktoreninz.pdf, id=352, 942.75412pt x 348.63951pt>
 File: Plots/Faktoreninz.pdf Graphic file (type pdf)
 <use Plots/Faktoreninz.pdf>
 Package luatex.def Info: Plots/Faktoreninz.pdf  used on input line 557.
@@ -2670,7 +2670,7 @@ te_list, 4 write, 96 pdf_literal, 54 pdf_colorstack, 2 pdf_setmatrix, 2 pdf_save
    avail lists: 1:2,2:487,3:341,4:222,5:533,6:43,7:2178,8:168,9:1712,10:65,11:15
 2
  60639 multiletter control sequences out of 65536+600000
- 135 fonts using 42931959 bytes
+ 135 fonts using 42931831 bytes
  128i,19n,144p,452b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
 </home/yanick/.local/texlive/2021/texmf-dist/fonts/opentype/public/fira/FiraSans
 -Light.otf></home/yanick/.local/texlive/2021/texmf-dist/fonts/opentype/public/fi
@@ -2680,10 +2680,10 @@ exmf-dist/fonts/opentype/public/firamath/FiraMath-Regular.otf></home/yanick/.loc
 al/texlive/2021/texmf-dist/fonts/opentype/public/fira/FiraSans-Medium.otf></home
 /yanick/.local/texlive/2021/texmf-dist/fonts/opentype/public/fira/FiraSans-Light
 .otf>
-Output written on main.pdf (42 pages, 2014687 bytes).
+Output written on main.pdf (42 pages, 2015122 bytes).
 
-PDF statistics: 497 PDF objects out of 1000 (max. 8388607)
- 377 compressed objects within 4 object streams
+PDF statistics: 504 PDF objects out of 1000 (max. 8388607)
+ 384 compressed objects within 4 object streams
  92 named destinations out of 1000 (max. 131072)
  48 words of extra memory for PDF output out of 10000 (max. 100000000)
 
