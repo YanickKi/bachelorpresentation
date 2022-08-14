@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.1.17)  14 AUG 2022 13:43
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.1.17)  14 AUG 2022 14:22
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -951,12 +951,12 @@ braces):
 >  {german/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for german
-(polyglossia)            synonyms	
 (polyglossia)            righthyphenmin	2
-(polyglossia)            patterns	hyph-de-1901.pat.txt
-(polyglossia)            hyphenation	
 (polyglossia)            loader	loadhyph-de-1901.tex
-(polyglossia)            lefthyphenmin	2 on input line 10
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            hyphenation	
+(polyglossia)            patterns	hyph-de-1901.pat.txt
+(polyglossia)            synonyms	 on input line 10
 Module polyglossia Info: Language german was not yet loaded; created with id 2 o
 n input line 10
 Package polyglossia Info: Option: German, spelling=new.
@@ -1881,12 +1881,12 @@ LaTeX Info: Redefining \rmfamily on input line 22.
 LaTeX Info: Redefining \sffamily on input line 22.
 LaTeX Info: Redefining \ttfamily on input line 22.
 Module polyglossia Info: Language data for ngerman
-(polyglossia)            synonyms	
 (polyglossia)            righthyphenmin	2
-(polyglossia)            patterns	hyph-de-1996.pat.txt
-(polyglossia)            hyphenation	
 (polyglossia)            loader	loadhyph-de-1996.tex
-(polyglossia)            lefthyphenmin	2 on input line 22
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            hyphenation	
+(polyglossia)            patterns	hyph-de-1996.pat.txt
+(polyglossia)            synonyms	 on input line 22
 Module polyglossia Info: Language ngerman was not yet loaded; created with id 3 
 on input line 22
 )
@@ -2680,7 +2680,7 @@ exmf-dist/fonts/opentype/public/firamath/FiraMath-Regular.otf></home/yanick/.loc
 al/texlive/2021/texmf-dist/fonts/opentype/public/fira/FiraSans-Medium.otf></home
 /yanick/.local/texlive/2021/texmf-dist/fonts/opentype/public/fira/FiraSans-Light
 .otf>
-Output written on main.pdf (42 pages, 2014625 bytes).
+Output written on main.pdf (42 pages, 2014687 bytes).
 
 PDF statistics: 497 PDF objects out of 1000 (max. 8388607)
  377 compressed objects within 4 object streams
